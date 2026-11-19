@@ -13,6 +13,7 @@ public class ShoppingCartPage extends BasePage {
     private final By cartBadge = By.className("shopping_cart_badge");
     private final By removeButtons = By.cssSelector("[data-test^='remove-']");
     private final By continueShoppingButton = By.id("continue-shopping");
+    private final By checkoutButton = By.id("checkout");
 
     public ShoppingCartPage(WebDriver driver) {
         super(driver);
@@ -43,5 +44,9 @@ public class ShoppingCartPage extends BasePage {
 
     public boolean isProductDisplayed(String productName) {
         return getCartItemNames().contains(productName);
+    }
+
+    public void proceedToCheckout() {
+        click(checkoutButton);
     }
 }
