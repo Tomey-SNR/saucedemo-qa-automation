@@ -111,3 +111,54 @@
 | Passed | 2 |
 | Failed | 0 |
 | Status | Passed |
+
+## User Story 3: Product List
+
+**As a User, I want to see the available products so that I can choose products to purchase.**
+
+### TC-PRODUCT-001: Display all products
+
+- **Priority:** High
+- **Type:** Positive
+- **Precondition:** User is logged in.
+- **Steps:**
+  1. Open the inventory page.
+  2. Inspect the displayed products.
+- **Expected result:** All six products are displayed.
+
+### TC-PRODUCT-002: Sort products by name (A–Z)
+
+- **Priority:** Medium
+- **Type:** Positive
+- **Precondition:** User is logged in and the inventory page is displayed.
+- **Steps:**
+  1. Select Name (A to Z) from the sorting dropdown.
+- **Expected result:** Products are displayed in alphabetical order.
+
+### TC-PRODUCT-003: Sort products by price (low to high)
+
+- **Priority:** Medium
+- **Type:** Positive
+- **Precondition:** User is logged in and the inventory page is displayed.
+- **Steps:**
+  1. Select Price (low to high) from the sorting dropdown.
+- **Expected result:** Products are displayed in ascending price order.
+
+### TC-PRODUCT-004: Sort products by price (high to low)
+
+- **Priority:** Medium
+- **Type:** Positive
+- **Precondition:** User is logged in and the inventory page is displayed.
+- **Steps:**
+  1. Select Price (high to low) from the sorting dropdown.
+- **Expected result:** Products are displayed in descending price order.
+
+### Execution Summary
+
+| Metric | Result |
+|---|---:|
+| Test cases | 4 |
+| Automated tests | 4 |
+| Passed | 4 |
+| Failed | 0 |
+| Status | Passed |
