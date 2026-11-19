@@ -19,6 +19,14 @@ public class DriverFactory {
 
         options.setExperimentalOption("prefs", preferences);
 
+        if ("true".equalsIgnoreCase(System.getenv("CI"))) {
+            options.addArguments(
+                    "--headless=new",
+                    "--no-sandbox",
+                    "--disable-dev-shm-usage"
+            );
+        }
+
         return new ChromeDriver(options);
     }
 }
