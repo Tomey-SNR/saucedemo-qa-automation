@@ -162,3 +162,53 @@
 | Passed | 4 |
 | Failed | 0 |
 | Status | Passed |
+
+## User Story 4: Product Details
+
+**As a User, I want to view product details so that I can make an informed purchasing decision.**
+
+### TC-DETAIL-001: Open product details
+
+- **Priority:** High
+- **Type:** Positive
+- **Precondition:** User is logged in and the inventory page is displayed.
+- **Steps:**
+  1. Click Sauce Labs Backpack.
+- **Expected result:** The product details page is displayed with the correct product name and image.
+
+### TC-DETAIL-002: Verify product name
+
+- **Priority:** Medium
+- **Type:** Positive
+- **Precondition:** Product details page is displayed.
+- **Steps:**
+  1. Inspect the product name.
+- **Expected result:** The product name is Sauce Labs Backpack.
+
+### TC-DETAIL-003: Verify product description
+
+- **Priority:** Medium
+- **Type:** Positive
+- **Precondition:** Product details page is displayed.
+- **Steps:**
+  1. Inspect the product description.
+- **Expected result:** The product description is not empty.
+
+### TC-DETAIL-004: Verify product price
+
+- **Priority:** Medium
+- **Type:** Positive
+- **Precondition:** Product details page is displayed.
+- **Steps:**
+  1. Inspect the product price.
+- **Expected result:** The product price is displayed and starts with a dollar sign.
+
+### Execution Summary
+
+| Metric | Result |
+|---|---:|
+| Test cases | 4 |
+| Automated tests | 4 |
+| Passed | 4 |
+| Failed | 0 |
+| Status | Passed |
