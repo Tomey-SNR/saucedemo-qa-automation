@@ -78,6 +78,8 @@ public class CheckoutTest extends BaseTest {
 
         checkoutPage.continueCheckout();
 
+        overviewPage.waitForProductCount(1);
+
         assertEquals(1, overviewPage.getProductCount());
         assertTrue(overviewPage.getProductNames().contains(BACKPACK));
     }

@@ -24,6 +24,14 @@ public class CheckoutOverviewPage extends BasePage {
         return driver.findElements(cartItems).size();
     }
 
+    public int waitForProductCount(int expectedCount) {
+        return wait.until(driver ->
+                driver.findElements(cartItems).size() == expectedCount
+                        ? expectedCount
+                        : null
+        );
+    }
+
     public List<String> getProductNames() {
         return driver.findElements(productNames)
                 .stream()
