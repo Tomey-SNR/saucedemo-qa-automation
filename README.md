@@ -1,5 +1,7 @@
 # SauceDemo QA Automation
 
+[![SauceDemo QA Automation CI](https://github.com/Tomey-SNR/saucedemo-qa-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/Tomey-SNR/saucedemo-qa-automation/actions/workflows/ci.yml)
+
 Automated functional testing of the [SauceDemo](https://www.saucedemo.com/) webshop using Java, Selenium WebDriver, JUnit 5 and Maven.
 
 ## Project Overview
