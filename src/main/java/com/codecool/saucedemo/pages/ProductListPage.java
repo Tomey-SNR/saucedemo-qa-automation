@@ -15,6 +15,9 @@ public class ProductListPage extends BasePage {
     private final By productNames = By.className("inventory_item_name");
     private final By productPrices = By.className("inventory_item_price");
     private final By sortDropdown = By.className("product_sort_container");
+    private final By addBackpackButton = By.id("add-to-cart-sauce-labs-backpack");
+    private final By addBikeLightButton = By.id("add-to-cart-sauce-labs-bike-light");
+    private final By shoppingCartLink = By.className("shopping_cart_link");
 
     public ProductListPage(WebDriver driver) {
         super(driver);
@@ -59,5 +62,17 @@ public class ProductListPage extends BasePage {
                 ));
 
         wait.until(ExpectedConditions.elementToBeClickable(product)).click();
+    }
+
+    public void addBackpackToCart() {
+        click(addBackpackButton);
+    }
+
+    public void addBikeLightToCart() {
+        click(addBikeLightButton);
+    }
+
+    public void openShoppingCart() {
+        click(shoppingCartLink);
     }
 }
