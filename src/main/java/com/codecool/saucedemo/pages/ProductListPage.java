@@ -3,9 +3,11 @@ package com.codecool.saucedemo.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class ProductListPage extends BasePage {
 
@@ -45,5 +47,17 @@ public class ProductListPage extends BasePage {
 
     public boolean areProductsDisplayed() {
         return getProductCount() > 0;
+    }
+
+    public void openProduct(String name) {
+        WebElement product = driver.findElements(productNames)
+                .stream()
+                .filter(element -> element.getText().trim().equals(name))
+                .findFirst()
+                .orElseThrow(() -> new NoSuchElementException(
+                        "Product not found: " + name
+                ));
+
+        wait.until(ExpectedConditions.elementToBeClickable(product)).click();
     }
 }
