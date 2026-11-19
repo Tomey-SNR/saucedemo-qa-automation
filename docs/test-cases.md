@@ -212,3 +212,66 @@
 | Passed | 4 |
 | Failed | 0 |
 | Status | Passed |
+
+## User Story 5: Shopping Cart
+
+**As a User, I want to manage my shopping cart so that I can review and modify my selected products before checkout.**
+
+### TC-CART-001: Add a product to the cart
+
+- **Priority:** High
+- **Type:** Positive
+- **Precondition:** User is logged in.
+- **Steps:**
+  1. Add Sauce Labs Backpack to the cart.
+  2. Open the shopping cart.
+- **Expected result:** Sauce Labs Backpack is displayed in the cart and the cart contains one item.
+
+### TC-CART-002: Add multiple products to the cart
+
+- **Priority:** High
+- **Type:** Positive
+- **Precondition:** User is logged in.
+- **Steps:**
+  1. Add Sauce Labs Backpack.
+  2. Add Sauce Labs Bike Light.
+  3. Open the shopping cart.
+- **Expected result:** Both products are displayed in the cart.
+
+### TC-CART-003: View added products
+
+- **Priority:** High
+- **Type:** Positive
+- **Precondition:** User has added products to the cart.
+- **Steps:**
+  1. Open the shopping cart.
+- **Expected result:** All added products are displayed.
+
+### TC-CART-004: Remove a product from the cart
+
+- **Priority:** High
+- **Type:** Positive
+- **Precondition:** User has added at least two products.
+- **Steps:**
+  1. Open the shopping cart.
+  2. Remove the first product.
+- **Expected result:** The removed product disappears and one product remains.
+
+### TC-CART-005: Continue shopping
+
+- **Priority:** Medium
+- **Type:** Positive
+- **Precondition:** User is viewing the shopping cart.
+- **Steps:**
+  1. Click Continue Shopping.
+- **Expected result:** User returns to the inventory page.
+
+### Execution Summary
+
+| Metric | Result |
+|---|---:|
+| Test cases | 5 |
+| Automated tests | 5 |
+| Passed | 5 |
+| Failed | 0 |
+| Status | Passed |
