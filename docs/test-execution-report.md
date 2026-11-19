@@ -120,6 +120,18 @@ The inventory page was not yet visible when the tests attempted to locate produc
 
 This was an automation synchronization issue, not a confirmed application defect.
 
+### Shopping Cart Synchronization Issue
+
+During a subsequent CI execution, the `ShoppingCartTest.userShouldAddMultipleProductsToCart` test failed because the expected cart item count was not available immediately after navigation.
+
+**Root cause:** The test checked the cart contents without waiting for the expected number of items to appear.
+
+**Resolution:** Added an explicit wait method in `ShoppingCartPage` and updated the shopping cart tests to wait for the expected item count.
+
+**Verification:** All 25 tests passed locally, and the subsequent GitHub Actions execution completed successfully.
+
+This was an automation synchronization issue, not a confirmed application defect.
+
 ## 7. Final Results
 
 The final automated test execution achieved:
