@@ -275,3 +275,67 @@
 | Passed | 5 |
 | Failed | 0 |
 | Status | Passed |
+
+## User Story 6: Checkout
+
+**As a User, I want to complete checkout so that I can purchase my selected products.**
+
+### TC-CHECKOUT-001: Proceed to checkout
+
+- **Priority:** High
+- **Type:** Positive
+- **Precondition:** User is logged in and has a product in the cart.
+- **Steps:**
+  1. Open the shopping cart.
+  2. Click Checkout.
+- **Expected result:** Checkout information form is displayed.
+
+### TC-CHECKOUT-002: Submit empty customer information
+
+- **Priority:** High
+- **Type:** Negative
+- **Precondition:** User is on the checkout information page.
+- **Steps:**
+  1. Leave all fields empty.
+  2. Click Continue.
+- **Expected result:** An error message indicates that First Name is required.
+
+### TC-CHECKOUT-003: Enter valid customer information
+
+- **Priority:** High
+- **Type:** Positive
+- **Precondition:** User is on the checkout information page.
+- **Test data:** John / Smith / 12345
+- **Steps:**
+  1. Enter first name, last name and postal code.
+  2. Click Continue.
+- **Expected result:** User proceeds to the checkout overview page.
+
+### TC-CHECKOUT-004: Review order summary
+
+- **Priority:** High
+- **Type:** Positive
+- **Precondition:** User has entered valid customer information.
+- **Steps:**
+  1. Proceed to the checkout overview.
+  2. Inspect the order summary.
+- **Expected result:** The selected product is displayed in the order summary.
+
+### TC-CHECKOUT-005: Complete purchase
+
+- **Priority:** High
+- **Type:** Positive
+- **Precondition:** User is on the checkout overview page.
+- **Steps:**
+  1. Click Finish.
+- **Expected result:** The purchase confirmation page displays "Thank you for your order!"
+
+### Execution Summary
+
+| Metric | Result |
+|---|---:|
+| Test cases | 5 |
+| Automated tests | 5 |
+| Passed | 5 |
+| Failed | 0 |
+| Status | Passed |
