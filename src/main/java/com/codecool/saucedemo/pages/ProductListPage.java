@@ -1,0 +1,49 @@
+package com.codecool.saucedemo.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
+
+public class ProductListPage extends BasePage {
+
+    private final By productItems = By.className("inventory_item");
+    private final By productNames = By.className("inventory_item_name");
+    private final By productPrices = By.className("inventory_item_price");
+    private final By sortDropdown = By.className("product_sort_container");
+
+    public ProductListPage(WebDriver driver) {
+        super(driver);
+    }
+
+    public int getProductCount() {
+        return driver.findElements(productItems).size();
+    }
+
+    public List<String> getProductNames() {
+        return driver.findElements(productNames)
+                .stream()
+                .map(WebElement::getText)
+                .toList();
+    }
+
+    public List<Double> getProductPrices() {
+        return driver.findElements(productPrices)
+                .stream()
+                .map(WebElement::getText)
+                .map(price -> price.replace("$", ""))
+                .map(Double::parseDouble)
+                .toList();
+    }
+
+    public void sortBy(String option) {
+        Select select = new Select(waitForVisibility(sortDropdown));
+        select.selectByValue(option);
+    }
+
+    public boolean areProductsDisplayed() {
+        return getProductCount() > 0;
+    }
+}
