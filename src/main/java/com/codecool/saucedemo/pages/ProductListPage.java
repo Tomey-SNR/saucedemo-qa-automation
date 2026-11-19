@@ -21,6 +21,7 @@ public class ProductListPage extends BasePage {
 
     public ProductListPage(WebDriver driver) {
         super(driver);
+        waitForVisibility(By.className("inventory_list"));
     }
 
     public int getProductCount() {
