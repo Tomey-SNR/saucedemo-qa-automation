@@ -75,3 +75,39 @@
 | Status | Passed |
 
 **Execution environment:** Java 21, Selenium WebDriver, JUnit 5, Maven, Chrome.
+
+## User Story 2: Logout
+
+**As a User, I want to log out so that I can securely end my session.**
+
+### TC-LOGOUT-001: Logout from the inventory page
+
+- **Priority:** High
+- **Type:** Positive
+- **Precondition:** User is successfully logged in.
+- **Steps:**
+  1. Open the navigation menu.
+  2. Click Logout.
+- **Expected result:** User is redirected to the login page.
+
+### TC-LOGOUT-002: Access inventory after logout
+
+- **Priority:** High
+- **Type:** Negative
+- **Precondition:** User has successfully logged in and then logged out.
+- **Steps:**
+  1. Log in with valid credentials.
+  2. Open the navigation menu.
+  3. Click Logout.
+  4. Navigate directly to the inventory URL.
+- **Expected result:** User cannot access the inventory page without logging in and is redirected to the login page.
+
+### Execution Summary
+
+| Metric | Result |
+|---|---:|
+| Test cases | 2 |
+| Automated tests | 2 |
+| Passed | 2 |
+| Failed | 0 |
+| Status | Passed |
