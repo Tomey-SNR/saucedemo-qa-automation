@@ -34,6 +34,8 @@ public class ShoppingCartTest extends BaseTest {
         productListPage.addBackpackToCart();
         productListPage.openShoppingCart();
 
+        shoppingCartPage.waitForCartItemCount(1);
+
         assertTrue(shoppingCartPage.isProductDisplayed(BACKPACK));
         assertEquals(1, shoppingCartPage.getCartItemCount());
     }
@@ -44,6 +46,8 @@ public class ShoppingCartTest extends BaseTest {
         productListPage.addBikeLightToCart();
 
         productListPage.openShoppingCart();
+
+        shoppingCartPage.waitForCartItemCount(2);
 
         assertEquals(2, shoppingCartPage.getCartItemCount());
         assertTrue(shoppingCartPage.isProductDisplayed(BACKPACK));
@@ -57,6 +61,8 @@ public class ShoppingCartTest extends BaseTest {
 
         productListPage.openShoppingCart();
 
+        shoppingCartPage.waitForCartItemCount(2);
+
         assertTrue(shoppingCartPage.isProductDisplayed(BACKPACK));
         assertTrue(shoppingCartPage.isProductDisplayed(BIKE_LIGHT));
     }
@@ -67,7 +73,11 @@ public class ShoppingCartTest extends BaseTest {
         productListPage.addBikeLightToCart();
 
         productListPage.openShoppingCart();
+        shoppingCartPage.waitForCartItemCount(2);
+
         shoppingCartPage.removeFirstProduct();
+
+        shoppingCartPage.waitForCartItemCount(1);
 
         assertEquals(1, shoppingCartPage.getCartItemCount());
     }

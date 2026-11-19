@@ -30,6 +30,14 @@ public class ShoppingCartPage extends BasePage {
         return driver.findElements(cartItems).size();
     }
 
+    public int waitForCartItemCount(int expectedCount) {
+        return wait.until(driver ->
+                driver.findElements(cartItems).size() == expectedCount
+                        ? expectedCount
+                        : null
+        );
+    }
+
     public String getCartBadgeCount() {
         return waitForVisibility(cartBadge).getText();
     }
